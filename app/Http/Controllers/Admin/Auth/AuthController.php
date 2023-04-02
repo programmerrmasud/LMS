@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin\Auth;
 
-use App\Models\User;
+use App\Models\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
@@ -15,6 +16,31 @@ class AuthController extends Controller
     public function AdminGetLogin()
     {
         return view('BackEnd.User.Auth.Login');
+    }
+
+     /**
+     * Login Session Management
+     */
+    public function AdminLogin(Request $request)
+    {
+        // $data = $request->all();
+        // dd($data);
+        
+        {
+            $credentials = $request->validate([
+                'email' => ['required', 'email'],
+                'password' => ['required'],
+            ]);
+    
+            if (Auth::attempt($credentials)) {
+                $request->session()->regenerate();
+                return redirect()->intended('/');
+            }
+    
+            return back()->withErrors([
+                'email' => 'Credentials do not match our records.',
+            ]);
+        }
     }
 
     /**
@@ -35,26 +61,19 @@ class AuthController extends Controller
             $validatedData = $request->validate([
                 'name' => 'required|max:255',
                 'email' => 'required|email|unique:users,email',
-                'password' => 'required|min:6|confirmed',
+                'password' => 'required|min:4',
             ]);
-        
+         
             // Create a new user and save it to the database
-            $user = new User;
-            $user->name = $validatedData['name'];
-            $user->email = $validatedData['email'];
-            $user->password = Hash::make($validatedData['password']);
-            $user->save();
+            $admin = new Admin;
+            $admin->name = $validatedData['name'];
+            $admin->email = $validatedData['email'];
+            $admin->password = Hash::make($validatedData['password']);
+            $admin->save();
         
-            return redirect('/admin/login')->with('success', 'User created successfully!');
+            return redirect('/')->with('success', 'User created successfully!');
+            
         }
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
     }
 
     /**

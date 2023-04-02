@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::resource('resources', App\Http\Controllers\Admin\UserResourceController::class);
 
 
-Route::get('admin/login',[App\Http\Controllers\Admin\Auth\AuthController::class, 'AdminGetLogin'])->name('dminGetLogin');
+Route::get('admin/login',[App\Http\Controllers\Admin\Auth\AuthController::class, 'AdminGetLogin'])->name('AdminGetLogin');
+Route::post('admin/login',[App\Http\Controllers\Admin\Auth\AuthController::class, 'AdminLogin'])->name('AdminLogin');
 Route::get('admin/register',[App\Http\Controllers\Admin\Auth\AuthController::class, 'AdminGetRegister'])->name('AdminGetRegister');
 Route::post('admin/register',[App\Http\Controllers\Admin\Auth\AuthController::class, 'AdminRegister'])->name('admin/register');

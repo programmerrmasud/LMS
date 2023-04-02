@@ -14,7 +14,8 @@
 				<div class="content">
 
 					<!-- Simple login form -->
-					<form action="index.html">
+					<form action="{{ route('AdminLogin') }}" method="POST">
+						@csrf
 						<div class="panel panel-body login-form">
 							<div class="text-center">
 								<div class="icon-object border-slate-300 text-slate-300"><i class="icon-reading"></i></div>
@@ -22,22 +23,30 @@
 							</div>
 
 							<div class="form-group has-feedback has-feedback-left">
-								<input type="text" class="form-control" placeholder="Username">
+								<input type="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="email">
 								<div class="form-control-feedback">
 									<i class="icon-user text-muted"></i>
 								</div>
+							@error('email')
+								<strong style="color:red;">{{ $message }}</strong>
+							@enderror
 							</div>
 
 							<div class="form-group has-feedback has-feedback-left">
-								<input type="text" class="form-control" placeholder="Password">
+								<input type="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password">
 								<div class="form-control-feedback">
 									<i class="icon-lock2 text-muted"></i>
 								</div>
+							@error('password')
+								<strong style="color:red;">{{ $message }}</strong>
+							@enderror
 							</div>
 
 							<div class="form-group">
 								<button type="submit" class="btn btn-primary btn-block">Sign in <i class="icon-circle-right2 position-right"></i></button>
-								<button type="submit" class="btn btn-success btn-block">Crate a new Account <i class="icon-circle-right2 position-right"></i></button>
+								<button class="btn btn-success btn-block" >
+                                    <a href="{{ route('AdminGetRegister') }}" style="color:rgb(244, 244, 247);">Create an Account ? <i class="icon-circle-right2 position-right"></i></a>
+                                </button>
 							</div>
 
 							<div class="text-center">

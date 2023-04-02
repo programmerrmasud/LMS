@@ -23,29 +23,40 @@
 							</div>
 
 							<div class="form-group has-feedback has-feedback-left">
-								<input type="text" name="name" class="form-control" placeholder="Your Name">
+								<input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}"  placeholder="Your Name" autocomplete="name">
 								<div class="form-control-feedback">
 									<i class="icon-user text-muted"></i>
 								</div>
+							@error('name')
+								<strong style="color:red;">{{ $message }}</strong>
+							@enderror
 							</div>
 
 							<div class="form-group has-feedback has-feedback-left">
-								<input type="text" name="email" class="form-control" placeholder="Your Email">
+								<input type="text" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" placeholder="Your Email" autocomplete="email" >
 								<div class="form-control-feedback">
 									<i class="icon-user text-muted"></i>
 								</div>
+							@error('name')
+								<strong style="color:red;">{{ $message }}</strong>
+							@enderror
 							</div>
 
 							<div class="form-group has-feedback has-feedback-left">
-								<input type="text" name="password" class="form-control" placeholder="Password">
+								<input type="text" name="password" class="form-control @error('password') is-invalid @enderror" value="{{ old('password') }}" placeholder="Password" >
 								<div class="form-control-feedback">
 									<i class="icon-lock2 text-muted"></i>
 								</div>
+							@error('name')
+								<strong style="color:red;">{{ $message }}</strong>
+							@enderror
 							</div>
 
 							<div class="form-group">
-								<button type="submit" class="btn btn-primary btn-block">Sign Up<i class="icon-circle-right2 position-right"></i></button>
-								<button type="submit" class="btn btn-success btn-block"> Already Have an Account ? <i class="icon-circle-leftposition-left"></i></button>
+								<button type="submit" class="btn btn-primary btn-block" >Sign Up<i class="icon-circle-right2 position-right"></i></button>
+                                <button class="btn btn-success btn-block ">
+                                    <a href="{{ route('AdminGetLogin') }}" style="color:rgb(244, 244, 247);">Already Have an Account ? <i class="icon-circle-right2 position-right"></i></a>
+                                </button>							
 							</div>
 
 							<div class="text-center">
