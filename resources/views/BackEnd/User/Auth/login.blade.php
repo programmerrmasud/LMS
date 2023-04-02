@@ -37,6 +37,7 @@
 
 							<div class="form-group">
 								<button type="submit" class="btn btn-primary btn-block">Sign in <i class="icon-circle-right2 position-right"></i></button>
+								<button type="submit" class="btn btn-Success btn-block">Sign in <i class="icon-circle-right2 position-right"></i></button>
 							</div>
 
 							<div class="text-center">
