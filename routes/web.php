@@ -24,4 +24,4 @@ Route::resource('resources', App\Http\Controllers\Admin\UserResourceController::
 
 Route::get('admin/login',[App\Http\Controllers\Admin\Auth\AuthController::class, 'AdminGetLogin'])->name('dminGetLogin');
 Route::get('admin/register',[App\Http\Controllers\Admin\Auth\AuthController::class, 'AdminGetRegister'])->name('AdminGetRegister');
-// Route::post('admin/register',[App\Http\Controllers\Admin\Auth\AuthController::class, 'AdminRegister'])->name('AdminRegister');
+Route::post('admin/register',[App\Http\Controllers\Admin\Auth\AuthController::class, 'AdminRegister'])->name('admin/register');
