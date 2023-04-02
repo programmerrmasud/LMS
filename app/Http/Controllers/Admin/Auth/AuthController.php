@@ -23,24 +23,20 @@ class AuthController extends Controller
      */
     public function AdminLogin(Request $request)
     {
-        // $data = $request->all();
-        // dd($data);
         
-        {
-            $credentials = $request->validate([
-                'email' => ['required', 'email'],
-                'password' => ['required'],
-            ]);
-    
-            if (Auth::attempt($credentials)) {
-                $request->session()->regenerate();
-                return redirect()->intended('/');
-            }
-    
-            return back()->withErrors([
-                'email' => 'Credentials do not match our records.',
-            ]);
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('/');
         }
+
+        return back()->withErrors([
+            'email' => 'Invalid Email or Password.',
+        ]);
     }
 
     /**
