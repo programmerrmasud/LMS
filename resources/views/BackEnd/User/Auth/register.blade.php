@@ -14,7 +14,8 @@
 				<div class="content">
 
 					<!-- Simple login form -->
-					<form action="index.html">
+					<form method="POST" action="{{ route('admin/register') }}">
+                        @csrf
 						<div class="panel panel-body login-form">
 							<div class="text-center">
 								<div class="icon-object border-slate-300 text-slate-300"><i class="icon-reading"></i></div>
@@ -22,20 +23,21 @@
 							</div>
 
 							<div class="form-group has-feedback has-feedback-left">
-								<input type="text" class="form-control" placeholder="Your Name">
-								<div class="form-control-feedback">
-									<i class="icon-user text-muted"></i>
-								</div>
-							</div>
-							<div class="form-group has-feedback has-feedback-left">
-								<input type="text" class="form-control" placeholder="Your Email">
+								<input type="text" name="name" class="form-control" placeholder="Your Name">
 								<div class="form-control-feedback">
 									<i class="icon-user text-muted"></i>
 								</div>
 							</div>
 
 							<div class="form-group has-feedback has-feedback-left">
-								<input type="text" class="form-control" placeholder="Password">
+								<input type="text" name="email" class="form-control" placeholder="Your Email">
+								<div class="form-control-feedback">
+									<i class="icon-user text-muted"></i>
+								</div>
+							</div>
+
+							<div class="form-group has-feedback has-feedback-left">
+								<input type="text" name="password" class="form-control" placeholder="Password">
 								<div class="form-control-feedback">
 									<i class="icon-lock2 text-muted"></i>
 								</div>

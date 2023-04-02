@@ -37,7 +37,7 @@
 
 							<div class="form-group">
 								<button type="submit" class="btn btn-primary btn-block">Sign in <i class="icon-circle-right2 position-right"></i></button>
-								<button type="submit" class="btn btn-Success btn-block">Sign in <i class="icon-circle-right2 position-right"></i></button>
+								<button type="submit" class="btn btn-success btn-block">Crate a new Account <i class="icon-circle-right2 position-right"></i></button>
 							</div>
 
 							<div class="text-center">
@@ -50,7 +50,7 @@
 
 					<!-- Footer -->
 					<div class="footer text-muted">
-						&copy; 2015. <a href="#">Learning Managment System</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">M.H. Aadeez</a>
+						&copy; 2023. <a href="#">Learning Managment System</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">M.H. Aadeez</a>
 					</div>
 					<!-- /footer -->
 
