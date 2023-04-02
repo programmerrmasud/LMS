@@ -20,7 +20,7 @@ class AuthController extends Controller
      */
     public function getRegister()
     {
-        return view('BackEnd.Auth.register');
+        return view('BackEnd.User.Auth.register');
     }
 
     /**
