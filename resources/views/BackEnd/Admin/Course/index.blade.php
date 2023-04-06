@@ -38,17 +38,19 @@
                     <td><span class="label label-success">{{ $course->CourseStatus }}</td>
                     <td class="text-center">
                         <ul class="icons-list">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="icon-menu9"></i>
-                                </a>
-
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="{{ route('courseEdit', $course->id) }}"><i class="icon-file-pencil"></i> Edit</a></li>
-                                    <li><a href="#"><i class="icon-file-bin"></i> Delete</a></li>
-
-                                </ul>
-                            </li>
+                            
+                            <div class="text-right">
+                                <form action="{{ route('courseDelete',$course->id) }}" method="POST">
+                                    
+                                @csrf
+                                @method('DELETE')
+                                        <a type="button" style="margin-right: 5px" href="{{ route('courseEdit', $course->id) }}"  class="btn btn-primary"><i class="icon-pencil4"></i>-Edit</a>
+                                        <button  type="submit" class="btn btn-danger btn-sm "><i class="icon-trash"></i>-Delete</button>  
+                                </form>
+                            </div>
+                                   
+                                
+                            
                         </ul>
                     </td>
                     <tr>

@@ -27,6 +27,7 @@ Route::get('admin/course/create',[App\Http\Controllers\Admin\CourseController::c
 Route::post('admin/course/store',[App\Http\Controllers\Admin\CourseController::class, 'Store'])->name('courseStore');
 Route::get('admin/course/edit{id}',[App\Http\Controllers\Admin\CourseController::class, 'Edit'])->name('courseEdit');
 Route::put('admin/course/update{id}',[App\Http\Controllers\Admin\CourseController::class, 'Update'])->name('courseUpdate');
+Route::delete('admin/course/delete{id}',[App\Http\Controllers\Admin\CourseController::class, 'Delete'])->name('courseDelete');
  
 
 Route::get('admin/login',[App\Http\Controllers\Admin\Auth\AuthController::class, 'AdminGetLogin'])->name('AdminGetLogin');

@@ -63,4 +63,13 @@ class CourseController extends Controller
             ->with('success', 'Course updated successfully.');
         
     }
+
+    public function Delete($id)
+    {
+    $course = Course::findOrFail($id);
+    $course->delete();
+
+    return redirect()->route('courseIndex')
+        ->with('success', 'Resource deleted successfully');
+    }
 }

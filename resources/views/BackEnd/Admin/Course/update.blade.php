@@ -6,6 +6,7 @@
         <form action="{{ route('courseUpdate',$course->id) }}" method="POST" >
             @csrf
             @method('PUT')
+            <fieldset>
             <div class="panel panel-flat">
                 <div class="panel-heading">
                     <h6 class="panel-title">Update Course</h6>
@@ -44,6 +45,7 @@
                     </div>
                 </div>
             </div>
+        </fieldset>
         </form>
     </div>
 </div>
