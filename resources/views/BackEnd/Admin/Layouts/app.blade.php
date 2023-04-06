@@ -9,7 +9,7 @@
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
-	<link href="{{ ('BackEnd/assets/css/icons/icomoon/styles.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ asset('BackEnd/assets/css/icons/icomoon/styles.css') }}" rel="stylesheet" type="text/css">
 	<link href="{{ asset('BackEnd/assets/css/minified/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
 	<link href="{{ asset('BackEnd/assets/css/minified/core.min.css') }}" rel="stylesheet" type="text/css">
 	<link href="{{ asset('BackEnd/assets/css/minified/components.min.css') }}" rel="stylesheet" type="text/css">
@@ -34,8 +34,6 @@
 
 	<script type="text/javascript" src="{{ asset('BackEnd/assets/js/core/app.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('BackEnd/assets/js/pages/dashboard.js') }}"></script>
-	<!-- /theme JS files -->
-
 </head>
 
 <body>
@@ -43,7 +41,7 @@
 	<!-- Main navbar -->
 	<div class="navbar navbar-inverse">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="index.html"><img src="{{ asset('BackEnd/assets/images/logo_light.png') }}" alt=""></a>
+			<a class="navbar-brand" href="index.html"><img src="{{ ('BackEnd/assets/images/logo_light.png') }}" alt=""></a>
 
 			<ul class="nav navbar-nav visible-xs-block">
 				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
@@ -139,17 +137,17 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown language-switch">
 					<a class="dropdown-toggle" data-toggle="dropdown">
-						<img src="{{ asset('BackEnd/assets/images/flags/gb.png') }}" class="position-left" alt="">
+						<img src="{{ ('BackEnd/assets/images/flags/gb.png') }}" class="position-left" alt="">
 						English
 						<span class="caret"></span>
 					</a>
 
 					<ul class="dropdown-menu">
-						<li><a class="deutsch"><img src="{{ asset('BackEnd/assets/images/flags/de.png') }}" alt=""> Deutsch</a></li>
-						<li><a class="ukrainian"><img src="{{ asset('BackEnd/assets/images/flags/ua.png') }} alt=""> Українська</a></li>
-						<li><a class="english"><img src="{{ asset('BackEnd/assets/images/flags/gb.png') }}" alt=""> English</a></li>
-						<li><a class="espana"><img src="{{ asset('BackEnd/assets/images/flags/es.png') }}" alt=""> España</a></li>
-						<li><a class="russian"><img src="{{ asset('BackEnd/assets/images/flags/ru.png') }}" alt=""> Русский</a></li>
+						<li><a class="deutsch"><img src="{{ ('BackEnd/assets/images/flags/de.png') }}" alt=""> Deutsch</a></li>
+						<li><a class="ukrainian"><img src="{{ ('BackEnd/assets/images/flags/ua.png') }} alt=""> Українська</a></li>
+						<li><a class="english"><img src="{{ ('BackEnd/assets/images/flags/gb.png') }}" alt=""> English</a></li>
+						<li><a class="espana"><img src="{{ ('BackEnd/assets/images/flags/es.png') }}" alt=""> España</a></li>
+						<li><a class="russian"><img src="{{ ('BackEnd/assets/images/flags/ru.png') }}" alt=""> Русский</a></li>
 					</ul>
 				</li>
 
@@ -171,7 +169,7 @@
 						<ul class="media-list dropdown-content-body">
 							<li class="media">
 								<div class="media-left">
-									<img src="{{ asset('BackEnd/assets/images/placeholder.jpg') }}" class="img-circle img-sm" alt="">
+									<img src="{{ ('BackEnd/assets/images/placeholder.jpg') }}" class="img-circle img-sm" alt="">
 									<span class="badge bg-danger-400 media-badge">5</span>
 								</div>
 
@@ -187,7 +185,7 @@
 
 							<li class="media">
 								<div class="media-left">
-									<img src="{{ asset('BackEnd/assets/images/placeholder.jpg') }}" class="img-circle img-sm" alt="">
+									<img src="{{ ('BackEnd/assets/images/placeholder.jpg') }}" class="img-circle img-sm" alt="">
 									<span class="badge bg-danger-400 media-badge">4</span>
 								</div>
 
@@ -202,7 +200,7 @@
 							</li>
 
 							<li class="media">
-								<div class="media-left"><img src="{{ asset('BackEnd/assets/images/placeholder.jpg') }}" class="img-circle img-sm" alt=""></div>
+								<div class="media-left"><img src="{{ ('BackEnd/assets/images/placeholder.jpg') }}" class="img-circle img-sm" alt=""></div>
 								<div class="media-body">
 									<a href="#" class="media-heading">
 										<span class="text-semibold">Jeremy Victorino</span>
@@ -214,7 +212,7 @@
 							</li>
 
 							<li class="media">
-								<div class="media-left"><img src="{{ asset('BackEnd/assets/images/placeholder.jpg') }}" class="img-circle img-sm" alt=""></div>
+								<div class="media-left"><img src="{{ ('BackEnd/assets/images/placeholder.jpg') }}" class="img-circle img-sm" alt=""></div>
 								<div class="media-body">
 									<a href="#" class="media-heading">
 										<span class="text-semibold">Beatrix Diaz</span>
@@ -226,7 +224,7 @@
 							</li>
 
 							<li class="media">
-								<div class="media-left"><img src="{{ asset('BackEnd/assets/images/placeholder.jpg') }}" class="img-circle img-sm" alt=""></div>
+								<div class="media-left"><img src="{{ ('BackEnd/assets/images/placeholder.jpg') }}" class="img-circle img-sm" alt=""></div>
 								<div class="media-body">
 									<a href="#" class="media-heading">
 										<span class="text-semibold">Richard Vango</span>
@@ -246,7 +244,7 @@
 
 				<li class="dropdown dropdown-user">
 					<a class="dropdown-toggle" data-toggle="dropdown">
-						<img src="{{ asset('BackEnd/assets/images/placeholder.jpg') }}" alt="">
+						<img src="{{ ('BackEnd/assets/images/placeholder.jpg') }}" alt="">
 						<span>Victoria</span>
 						<i class="caret"></i>
 					</a>
@@ -280,7 +278,7 @@
 					<div class="sidebar-user">
 						<div class="category-content">
 							<div class="media">
-								<a href="#" class="media-left"><img src="{{ asset('BackEnd/assets/images/placeholder.jpg') }}" class="img-circle img-sm" alt=""></a>
+								<a href="#" class="media-left"><img src="{{ ('BackEnd/assets/images/placeholder.jpg') }}" class="img-circle img-sm" alt=""></a>
 								<div class="media-body">
 									<span class="media-heading text-semibold">Victoria Baker</span>
 									<div class="text-size-mini text-muted">
@@ -308,10 +306,10 @@
 
 								<!-- Main -->
 								<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
-								<li class="active"><a href="index.html"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
-								<li class=""><a href="index.html"><i class="icon-home4"></i> <span>User</span></a></li>
-								<li class=""><a href="index.html"><i class="icon-home4"></i> <span>Demo 1</span></a></li>
-								<li class=""><a href="index.html"><i class="icon-home4"></i> <span>Demo 2</span></a></li>
+								<li class="active"><a href="{{ route('dashboard') }}"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+								<li class=""><a href="{{ route('courseIndex') }}"><i class="icon-home4"></i> <span>Course</span></a></li>
+								<li class=""><a href="index.html"><i class="icon-home4"></i> <span>Books</span></a></li>
+								
 								<li>
 									<a href="#"><i class="icon-stack2"></i> <span>Page layouts</span></a>
 									<ul>
@@ -386,7 +384,13 @@
 				</div>
 				<!-- /page header -->
 
+                <!-- Main Content Start  -->
 
+
+                @yield('content')
+
+                <!-- Main Content End  -->
+   
 				<!-- Content area -->
 				<div class="content">
 					<!-- Footer -->

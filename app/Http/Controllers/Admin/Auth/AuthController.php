@@ -22,21 +22,26 @@ class AuthController extends Controller
      * Login Session Management
      */
     public function AdminLogin(Request $request)
-    {
-        
-        $credentials = $request->validate([
-            'email' => ['required', 'email'],
-            'password' => ['required'],
-        ]);
+    {   $request->validate([
+        'email'=>'required|email',
+        'password'=>'required|min:5|max:12'
+    ]);
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            return redirect()->intended('/');
+         $credencials = Admin::where('email','=', $request->email)->first();
+
+        if(!$credencials){
+        return back()->with('fail','We do not recognize your email address');
         }
+        else{
+       //check password
+       if(Hash::check($request->password, $credencials->password)){
+        $request->session()->put('LoggedUser', $credencials->id);
+        return redirect('/');
 
-        return back()->withErrors([
-            'email' => 'Invalid Email or Password.',
-        ]);
+       }else{
+           return back()->with('fail','Incorrect password');
+       }
+   }
     }
 
     /**

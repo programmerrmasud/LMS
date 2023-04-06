@@ -14,7 +14,7 @@
 				<div class="content">
 
 					<!-- Simple login form -->
-					<form method="POST" action="{{ route('admin/register') }}">
+					<form method="POST" action="">
                         @csrf
 						<div class="panel panel-body login-form">
 							<div class="text-center">

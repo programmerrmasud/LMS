@@ -21,6 +21,13 @@ Route::get('/', function () {
 // This is Admin Panel Rout for maintaining User CRUD
 Route::resource('resources', App\Http\Controllers\Admin\UserResourceController::class);
 
+Route::get('admin/dashboard',[App\Http\Controllers\Admin\DashboardController::class, 'dashboard'])->name('dashboard');
+Route::get('admin/course/index',[App\Http\Controllers\Admin\CourseController::class, 'Index'])->name('courseIndex');
+Route::get('admin/course/create',[App\Http\Controllers\Admin\CourseController::class, 'Create'])->name('courseCreate');
+Route::post('admin/course/store',[App\Http\Controllers\Admin\CourseController::class, 'Store'])->name('courseStore');
+Route::get('admin/course/edit{id}',[App\Http\Controllers\Admin\CourseController::class, 'Edit'])->name('courseEdit');
+Route::put('admin/course/update{id}',[App\Http\Controllers\Admin\CourseController::class, 'Update'])->name('courseUpdate');
+ 
 
 Route::get('admin/login',[App\Http\Controllers\Admin\Auth\AuthController::class, 'AdminGetLogin'])->name('AdminGetLogin');
 Route::post('admin/login',[App\Http\Controllers\Admin\Auth\AuthController::class, 'AdminLogin'])->name('AdminLogin');
