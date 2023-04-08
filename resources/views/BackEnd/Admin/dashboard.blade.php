@@ -1,5 +1,5 @@
 @extends('BackEnd.Admin.Layouts.app')
-@section('title','Login Page')
+@section('title','Dashboard')
 @section('content')
     <h1>hi</h1>
 @endsection

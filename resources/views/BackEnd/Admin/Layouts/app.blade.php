@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>themelock.com - Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+	<title>LMS-Aadeez</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -34,6 +34,12 @@
 
 	<script type="text/javascript" src="{{ asset('BackEnd/assets/js/core/app.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('BackEnd/assets/js/pages/dashboard.js') }}"></script>
+	<!-- Data table sorting Js -->
+	<script type="text/javascript" src="{{ asset('BackEnd/assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('BackEnd/assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+	
+	<script type="text/javascript" src="{{ asset('BackEnd/assets/js/core/app.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('BackEnd/assets/js/pages/datatables_sorting.js') }}"></script>
 </head>
 
 <body>
@@ -209,22 +215,15 @@
 
 								<!-- Main -->
 								<li class="active"><a href="{{ route('dashboard') }}"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
-								<li class=""><a href="{{ route('courseIndex') }}"><i class="icon-home4"></i> <span>Course</span></a></li>
-								<li class=""><a href="{{ route('bookIndex') }}"><i class="icon-home4"></i> <span>Books</span></a></li>
+								<li class=""><a href="{{ route('courseIndex') }}"><i class="icon-book3"></i> <span>Course</span></a></li>
+								<li class=""><a href="{{ route('bookIndex') }}"><i class=" icon-book"></i> <span>Books</span></a></li>
 
 								<li>
-									<a href="#"><i class="icon-stack2"></i> <span>Page layouts</span></a>
+									<a href="#"><i class="icon-user"></i> <span>Students</span></a>
 									<ul>
-										<li><a href="layout_navbar_fixed.html">Fixed navbar</a></li>
-										<li><a href="layout_navbar_sidebar_fixed.html">Fixed navbar &amp; sidebar</a></li>
-										<li><a href="layout_sidebar_fixed_native.html">Fixed sidebar native scroll</a></li>
-										<li><a href="layout_navbar_hideable.html">Hideable navbar</a></li>
-										<li><a href="layout_navbar_hideable_sidebar.html">Hideable &amp; fixed sidebar</a></li>
-										<li><a href="layout_footer_fixed.html">Fixed footer</a></li>
-										<li class="navigation-divider"></li>
-										<li><a href="boxed_default.html">Boxed with default sidebar</a></li>
-										<li><a href="boxed_mini.html">Boxed with mini sidebar</a></li>
-										<li><a href="boxed_full.html">Boxed full width</a></li>
+										<li><a href="{{ route('bscIndex') }}">BSc Nursing</a></li>
+										<li><a href="layout_navbar_fixed.html">Diploma Nursing</a></li>
+										<li><a href="layout_navbar_fixed.html">JU University</a></li>			
 									</ul>
 								</li>
 								<!-- /page kits -->

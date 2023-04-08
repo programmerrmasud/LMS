@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Book Adress Collection Route Start
+Route::get('user/bookform',[App\Http\Controllers\UserData\FormController::class, 'index'])->name('from.index');
+// Book Adress Collection Route End
 
 // This is Admin Panel Rout for maintaining User CRUD
 Route::resource('resources', App\Http\Controllers\Admin\UserResourceController::class);
@@ -43,6 +46,15 @@ Route::delete('admin/course/delete{id}',[App\Http\Controllers\Admin\CourseContro
  Route::put('admin/book/update{id}',[App\Http\Controllers\Admin\BookController::class, 'Update'])->name('bookUpdate');
  Route::delete('admin/course/delete{id}',[App\Http\Controllers\Admin\BookController::class, 'Delete'])->name('courseDelete');
  // Book Managment End
+
+ // BSc Students Managment Start
+ Route::get('admin/students/bsc/index',[App\Http\Controllers\Admin\BscController::class, 'Index'])->name('bscIndex');
+ Route::get('admin/students/bsc/create',[App\Http\Controllers\Admin\BscController::class, 'Create'])->name('bscCreate');
+ Route::post('admin/students/bsc/store',[App\Http\Controllers\Admin\BscController::class, 'Store'])->name('bscStore');
+ Route::get('admin/students/bsc/edit{id}',[App\Http\Controllers\Admin\BscController::class, 'Edit'])->name('bscEdit');
+ Route::put('admin/students/bsc/update{id}',[App\Http\Controllers\Admin\BscController::class, 'Update'])->name('bscUpdate');
+ Route::delete('admin/students/bsc/delete{id}',[App\Http\Controllers\Admin\BscController::class, 'Delete'])->name('bscDelete');
+ // BSc Students Managment End
 
 //  Admin log in route Start
 Route::get('admin/login',[App\Http\Controllers\Admin\Auth\AuthController::class, 'AdminGetLogin'])->name('AdminGetLogin');
