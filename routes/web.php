@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 // Book Adress Collection Route Start
 Route::get('user/bookform',[App\Http\Controllers\UserData\FormController::class, 'index'])->name('from.index');
+Route::post('user/bookstore',[App\Http\Controllers\UserData\FormController::class, 'store'])->name('from.store');
 // Book Adress Collection Route End
 
 // This is Admin Panel Rout for maintaining User CRUD

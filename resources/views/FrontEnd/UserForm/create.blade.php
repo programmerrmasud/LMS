@@ -19,7 +19,8 @@
             </div>
         </div>
 
-        <form class="steps-validation" action="#">
+        <form class="steps-validation" id="bookform" action="{{ route('from.store') }}" method="POST" >
+            @csrf
             <h6>Personal data</h6>
             <fieldset>
                 <div class="row">
@@ -36,10 +37,7 @@
                             <select name="district" data-placeholder="Select District" class="select required">
                                 <option></option>
                                 <optgroup label="Your District">
-                                    <option value="1">Sales Engineer</option>
-                                    <option value="2">Ads Solutions Consultant</option>
-                                    <option value="3">Technical Solutions Consultant</option>
-                                    <option value="4">Business Intern</option>
+                                    <option value="Engineer">Sales Engineer</option>
                                 </optgroup>
                             </select>
                         </div>
@@ -60,10 +58,7 @@
                             <select name="area" data-placeholder="Select Area" class="select required">
                                 <option></option>
                                 <optgroup label="Select Area">
-                                    <option value="1">Sales Engineer</option>
-                                    <option value="2">Ads Solutions Consultant</option>
-                                    <option value="3">Technical Solutions Consultant</option>
-                                    <option value="4">Business Intern</option>
+                                    <option value="Engineer">Sales Engineer</option>
                                 </optgroup>
                             </select>
                         </div>
@@ -101,10 +96,7 @@
                             <select name="course" data-placeholder="Select course" class="select required">
                                 <option></option>
                                 <optgroup label="Select Course">
-                                    <option value="1">Sales Engineer</option>
-                                    <option value="2">Ads Solutions Consultant</option>
-                                    <option value="3">Technical Solutions Consultant</option>
-                                    <option value="4">Business Intern</option>
+                                    <option value="Engineer">Sales Engineer</option>
                                 </optgroup>
                             </select>
                         </div>
@@ -113,7 +105,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Session</label>
-                            <select name="Session" data-placeholder="Session" class="select">
+                            <select name="session" data-placeholder="session" class="select">
                                 <option></option> 
                                 <option value="1">2023</option> 
                                 <option value="2">2024</option> 
@@ -138,10 +130,7 @@
                             <select name="batch" data-placeholder="Select batch" class="select required">
                                 <option></option>
                                 <optgroup label="Developer Relations">
-                                    <option value="1">Sales Engineer</option>
-                                    <option value="2">Ads Solutions Consultant</option>
-                                    <option value="3">Technical Solutions Consultant</option>
-                                    <option value="4">Business Intern</option>
+                                    <option value="Engineer">Sales Engineer</option>
                                 </optgroup>
                             </select>
                         </div>
@@ -151,10 +140,7 @@
                             <select name="book" data-placeholder="Select Book" class="select required">
                                 <option></option>
                                 <optgroup label="Book">
-                                    <option value="1">Sales Engineer</option>
-                                    <option value="2">Ads Solutions Consultant</option>
-                                    <option value="3">Technical Solutions Consultant</option>
-                                    <option value="4">Business Intern</option>
+                                    <option value="Sales Engineer">Sales Engineer</option>   
                                 </optgroup>
                             </select>
                         </div>
@@ -163,25 +149,16 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Submit time</label>
-                            <select name="SubmitTime" data-placeholder="IOnce or Twice" class="select">
+                            <select name="SubmitTime" data-placeholder="Once or Twice" class="select">
                                 <option></option> 
-                                <option value="1">2023</option> 
-                                <option value="2">2024</option> 
-                                <option value="3">2025</option> 
-                                <option value="4">2026</option> 
-                                <option value="4">2027</option> 
-                                <option value="4">2028</option> 
-                                <option value="4">2029</option> 
-                                <option value="4">2030</option> 
-                                <option value="4">2031</option> 
-                                <option value="4">2032</option> 
-                                <option value="4">2033</option> 
+                                <option value="Once">2023</option> 
+                                <option value="Twice">2024</option>   
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label>Course Fee </label>
-                            <input type="fee" name="education-language" placeholder="Enter Your Fee " class="form-control">
+                            <input type="fee" name="fee" placeholder="Enter Your Fee " class="form-control">
                         </div>
                     </div>
                 </div>

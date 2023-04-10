@@ -145,7 +145,10 @@ $(function() {
         },
 
         onFinished: function (event, currentIndex) {
-            alert("Submitted!");
+            // alert("Submitted!");
+            // myForm.submit(bookform);
+            const myForm = document.getElementById('bookform');
+            myForm.submit();
         }
     });
 

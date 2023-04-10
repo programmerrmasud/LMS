@@ -1,14 +1,13 @@
 <?php
 
-namespace App\Models\BookForm;
+namespace App\Models\Book;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class BookForm extends Model
+class Bookform extends Model
 {
     use HasFactory;
-    
     protected $fillable = [
         'name',
         'phone',
@@ -23,5 +22,4 @@ class BookForm extends Model
         'SubmitTime',
         'fee',
     ];
-
 }
