@@ -12,4 +12,9 @@ class FormController extends Controller
     {
         return view('FrontEnd.UserForm.create');
     }
+     // This method returns all of the courses to the view.
+     public function store()
+     {
+         return view('FrontEnd.UserForm.create');
+     }
 }
