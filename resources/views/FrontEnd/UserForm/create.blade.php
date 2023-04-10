@@ -26,16 +26,16 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Applicant name: <span class="text-danger">*</span></label>
-                            <input type="text" name="name" class="form-control required" placeholder="John Doe">
+                            <input type="text" name="name" class="form-control required" placeholder="Enter Your Name">
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>District <span class="text-danger">*</span></label>
-                            <select name="position" data-placeholder="Select position" class="select required">
+                            <select name="district" data-placeholder="Select District" class="select required">
                                 <option></option>
-                                <optgroup label="Developer Relations">
+                                <optgroup label="Your District">
                                     <option value="1">Sales Engineer</option>
                                     <option value="2">Ads Solutions Consultant</option>
                                     <option value="3">Technical Solutions Consultant</option>
@@ -50,16 +50,16 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Phone</label>
-                            <input type="text" name="tel" class="form-control" placeholder="01700000000" >
+                            <input type="phpone" name="phone" class="form-control" placeholder="01700000000" >
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Area  <span class="text-danger">*</span></label>
-                            <select name="position" data-placeholder="Select position" class="select required">
+                            <select name="area" data-placeholder="Select Area" class="select required">
                                 <option></option>
-                                <optgroup label="Developer Relations">
+                                <optgroup label="Select Area">
                                     <option value="1">Sales Engineer</option>
                                     <option value="2">Ads Solutions Consultant</option>
                                     <option value="3">Technical Solutions Consultant</option>
@@ -74,7 +74,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Verified Phone</label>
-                            <input type="text" name="tel" class="form-control" placeholder="01700000000" >
+                            <input type="veriphone" name="veriphone" class="form-control" placeholder="01700000000" >
                         </div>
                     </div>
 
@@ -84,7 +84,7 @@
                         <div class="form-group">
                             <div class="form-group">
                                 <label>Address</label>
-                                <input type="text" name="tel" class="form-control" placeholder="01700000000" >
+                                <input type="text" name="address" class="form-control" placeholder="01700000000" >
                             </div>
                         </div>
                     
@@ -98,9 +98,9 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Enrolled Course<span class="text-danger">*</span></label>
-                            <select name="position" data-placeholder="Select position" class="select required">
+                            <select name="course" data-placeholder="Select course" class="select required">
                                 <option></option>
-                                <optgroup label="Developer Relations">
+                                <optgroup label="Select Course">
                                     <option value="1">Sales Engineer</option>
                                     <option value="2">Ads Solutions Consultant</option>
                                     <option value="3">Technical Solutions Consultant</option>
@@ -113,7 +113,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Session</label>
-                            <select name="university-country" data-placeholder="Choose a Country..." class="select">
+                            <select name="Session" data-placeholder="Session" class="select">
                                 <option></option> 
                                 <option value="1">2023</option> 
                                 <option value="2">2024</option> 
@@ -135,7 +135,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label> Batch  <span class="text-danger">*</span></label>
-                            <select name="position" data-placeholder="Select position" class="select required">
+                            <select name="batch" data-placeholder="Select batch" class="select required">
                                 <option></option>
                                 <optgroup label="Developer Relations">
                                     <option value="1">Sales Engineer</option>
@@ -148,9 +148,9 @@
 
                         <div class="form-group">
                             <label>Book <span class="text-danger">*</span></label>
-                            <select name="position" data-placeholder="Select position" class="select required">
+                            <select name="book" data-placeholder="Select Book" class="select required">
                                 <option></option>
-                                <optgroup label="Developer Relations">
+                                <optgroup label="Book">
                                     <option value="1">Sales Engineer</option>
                                     <option value="2">Ads Solutions Consultant</option>
                                     <option value="3">Technical Solutions Consultant</option>
@@ -163,7 +163,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Submit time</label>
-                            <select name="university-country" data-placeholder="Choose a Country..." class="select">
+                            <select name="SubmitTime" data-placeholder="IOnce or Twice" class="select">
                                 <option></option> 
                                 <option value="1">2023</option> 
                                 <option value="2">2024</option> 
@@ -181,7 +181,7 @@
 
                         <div class="form-group">
                             <label>Course Fee </label>
-                            <input type="text" name="education-language" placeholder="4500 " class="form-control">
+                            <input type="fee" name="education-language" placeholder="Enter Your Fee " class="form-control">
                         </div>
                     </div>
                 </div>
