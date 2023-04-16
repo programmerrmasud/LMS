@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers\UserData;
 
+use App\Models\Course;
 use Illuminate\Http\Request;
 use App\Models\Book\Bookform;
+use App\Models\Place\District;
+use App\Models\Place\Location;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
@@ -12,8 +16,23 @@ class FormController extends Controller
     // This method returns all of the courses to the view.
     public function index()
     {
-        return view('FrontEnd.UserForm.create');
+         // Get all the top level dependencies
+         $districts = District::whereNull('id')->get();
+         return view('FrontEnd.UserForm.create', compact('districts'));
     }
+     
+    public function getLocations($id)
+    {
+        // Find the dependent of the given dependency id
+        $dependency = District::find($id);
+
+        // Get all the dependent's children
+        $dependentChildren = $dependency->children;
+
+        return response()->json($dependentChildren);
+    
+    }
+
      public function store(Request $request)
      {
          $validator = Validator::make($request->all(), [

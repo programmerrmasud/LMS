@@ -34,12 +34,15 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>District <span class="text-danger">*</span></label>
-                            <select name="district" data-placeholder="Select District" class="select required">
-                                <option></option>
+                            <select name="district" id="district" data-placeholder="Select District" class="select required">
+                                {{-- <option></option> --}}
                                 <optgroup label="Your District">
-                                    <option value="Engineer">Sales Engineer</option>
+                                    @foreach ( $districts as $district )
+                                    <option value="{{ $district->id }}">{{ $district->district_name }}</option>  
+                                    @endforeach
                                 </optgroup>
                             </select>
+
                         </div>
                     </div>
                 </div>
@@ -48,19 +51,19 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Phone</label>
-                            <input type="phpone" name="phone" class="form-control" placeholder="01700000000" >
+                            <input type="phone" name="phone" class="form-control" placeholder="01700000000" >
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Area  <span class="text-danger">*</span></label>
-                            <select name="area" data-placeholder="Select Area" class="select required">
-                                <option></option>
+                            <select name="location" id="location" data-placeholder="Select Area" class="select required"> 
                                 <optgroup label="Select Area">
-                                    <option value="Engineer">Sales Engineer</option>
+                                
                                 </optgroup>
                             </select>
+
                         </div>
                     </div>
                 </div>
@@ -92,11 +95,11 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label>Enrolled Course<span class="text-danger">*</span></label>
-                            <select name="course" data-placeholder="Select course" class="select required">
+                            <label>Enrolled Course<span class="text-danger">*</span></label>          
+                            <select name="course" id="course" data-placeholder="Select course" class="select required">
                                 <option></option>
                                 <optgroup label="Select Course">
-                                    <option value="Engineer">Sales Engineer</option>
+                                    <option value="">1</option>   
                                 </optgroup>
                             </select>
                         </div>
@@ -171,4 +174,34 @@
 <!-- /content area -->
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+        $('#district').change(function() {
+            var id = $(this).val();
+            $('#location').empty();
+
+            // Send an AJAX request to get the children of the selected dependency
+            $.get("user/bookform/" + id, function(data) {
+                if (data.length > 0) {
+                    $('#location').append($('<option>', {
+                        value: '',
+                        text: 'Select a dependency...'
+                    }));
+                    $.each(data, function(i, item) {
+                        $('#location').append($('<option>', {
+                            value: location.id,
+                            text: location.name
+                        }));
+                    });
+                } else {
+                    $('#location').append($('<option>', {
+                        value: '',
+                        text: 'No dependencies found'
+                    }));
+                }
+            });
+        });
+    });
+</script>
 @endsection

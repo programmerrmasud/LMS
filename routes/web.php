@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 // Book Adress Collection Route Start
 Route::get('user/bookform',[App\Http\Controllers\UserData\FormController::class, 'index'])->name('from.index');
+Route::get('user/bookform/{district_id}',[App\Http\Controllers\UserData\FormController::class, 'getLocations'])->name('getLocation');
 Route::post('user/bookstore',[App\Http\Controllers\UserData\FormController::class, 'store'])->name('from.store');
 // Book Adress Collection Route End
 
